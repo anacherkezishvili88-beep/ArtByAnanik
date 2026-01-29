@@ -1,0 +1,120 @@
+header {
+ text-align: left;
+    margin-bottom: 35px; 
+    margin-left: 35px;
+}
+
+header img {
+    width: 50%; 
+    height: auto;
+    margin-top: 35px;
+}
+
+.optical{
+    width: 600px;
+    height:640px;
+    transition: all 0.7s ease; 
+}
+
+.game{
+    width: 800px;
+    height:640px;
+    transition: all 0.7s ease;
+}
+
+.clock{
+    width: 600px;
+    height: 640px;
+    transition: all 0.7s ease;
+}
+
+.face{
+    width: 400px;
+    height: 440px;
+    transition: all 0.7s ease;
+}
+
+.pier{
+    width: 400px;
+    height: 440px;
+    transition: all 0.7s ease;
+}
+
+.corpse{
+    width: 500px; 
+    height: 1140px; 
+    transition: all 0.7s ease;
+}
+
+.quilts{ 
+    width: 420px;
+    height: 590px; 
+    transition: all 0.7s ease;
+}
+
+.orchid{
+    width: 400px; 
+    height: 440px;
+    transition: all 0.7s ease;
+}
+
+.p5s{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.container{
+    width: 100%;
+    position: relative;
+    margin-left: 30%;
+    margin-top: 9%;
+}
+
+.container:hover .optical {
+    margin-left: -15%;
+}
+.container:hover .game {
+    margin-left: -25%; 
+}
+.container:hover .clock {
+    margin-left: -15%; 
+}
+.container:hover .face {
+    margin-left: -7%; 
+}
+.container:hover .pier {
+    margin-left: -7%; 
+}
+.container:hover .corpse {
+    margin-left: -10%; 
+}
+.container:hover .quilts {
+    margin-left: -7%; 
+}
+.container:hover .orchid {
+    margin-left: -7%; 
+}
+
+.projectinfo {
+    position: absolute;
+    top: 20%;
+    left: 38%; 
+    opacity: 0;
+    pointer-events: none;
+    width: 30%;
+    transition: opacity 0.2s ease 0.3s, transform 0.4s ease 0.4s;
+}
+
+.container:hover .projectinfo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.container:not(:hover) .projectinfo {
+    transition-delay: 0s;
+}
+
