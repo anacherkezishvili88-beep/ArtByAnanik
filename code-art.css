@@ -75,7 +75,7 @@ header img {
 }
 
 .container:hover .optical {
-    margin-left: -15%;
+    margin-left: -5%;
 }
 .container:hover .game {
     margin-left: -25%; 
