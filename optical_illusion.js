@@ -12,7 +12,7 @@ const opticalIllusion = ( p ) => {
   };
 
 // i'm using p here because i want all of my p5 projects to be in one place like the user scrolling through the projects, therefore since javascript can't have multiple functions named just setup(), I'm giving the sketch it's label and I'm telling javascript that "p" is optical illusion. 
-
+// "p" is like the word you. it's like a pronoun too 
   p.setup = function() {
     canvas = p.createCanvas(600, 600);
     canvas.parent("optical_illusion-container");
