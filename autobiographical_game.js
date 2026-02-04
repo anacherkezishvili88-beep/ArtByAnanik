@@ -65,7 +65,7 @@ const autobiographicalGame = ( p ) => {
 
   // --- PRELOAD ---
   p.preload = function() {
-    // Make sure these files are in your main folder!
+    
     anaFont = p.loadFont("font.ttf"); 
     roomLayoutImage = p.loadImage("room_layout.jpg"); 
     deskSceneBgImage = p.loadImage("desk_scene_bg.jpg");
