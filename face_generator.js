@@ -18,7 +18,7 @@ const faceGenerator = (p) => {
     canvas.mousePressed(changeFeatures);
   };
 
-  // --- DRAW ---
+  
   p.draw = function() {
     p.translate(p.width / 2, p.height / 2); 
     let scaleX = p.width / 400;
@@ -441,8 +441,8 @@ const faceGenerator = (p) => {
     } 
   };
 
-  // --- INTERACTION FUNCTION ---
-  // This is called by canvas.mousePressed() above
+ 
+  // called by canvas.mousePressed() above
   function changeFeatures() {
     face = (face % 4) + 1;
     eye = (eye % 4) + 1;
