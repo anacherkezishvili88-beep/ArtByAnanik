@@ -17,8 +17,8 @@ const experimentalClock = (p) => {    //basically creating a private room for ea
     // setup video
     video = p.createCapture(p.VIDEO);
     video.size(600, 600);
-    video.hide(); // IMPORTANT: Hides the raw DOM video element
-
+    video.parent('raw-video-container');
+   
     p.frameRate(80);
   };
 
