@@ -1,26 +1,28 @@
+/* RESET */
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background-color: white; /* Ensures images blend in */
+    font-family: 'Helvetica', sans-serif;
+    background-color: white;
 }
 
+/* HEADER */
 header {
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 50px; 
+    margin-top: 40px;
+    margin-bottom: 60px; /* Space between header and buttons */
 }
 
 header img {
-    width: 50%; 
-    max-width: 600px; /* Prevents it from getting too huge on big screens */
+    width: 50%;
+    max-width: 600px; /* Keeps header from getting too big */
     height: auto;
 }
 
-/* MAIN WRAPPER */
+/* MAIN LAYOUT WRAPPER */
 .main-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stacks Buttons on top of Doodle */
     align-items: center;
     width: 100%;
 }
@@ -32,28 +34,38 @@ header img {
     justify-content: center;
     align-items: center;
     
-    /* This GAP controls how far left/right the buttons go. 
-       Increase this number to move Code Art further left! */
-    gap: 120px; 
+    /* This GAP separates the two buttons. */
+    gap: 80px; 
     
-    margin-bottom: 20px; /* Space between buttons and doodle */
+    margin-bottom: -40px; /* Negative margin pulls the doodle up closer */
     width: 100%;
 }
 
-/* STYLE THE BUTTON IMAGES */
+/* FIXING THE GIANT IMAGES */
 .button-link img {
-    width: 300px; /* Nice consistent size for buttons */
+    width: 350px;  /* This fixes the giant size issue! */
     height: auto;
-    transition: transform 0.2s; /* Optional: adds a little pop when clicked */
+    transition: transform 0.2s;
 }
 
 .button-link img:hover {
-    transform: scale(1.05); /* Optional: hover effect */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* OPTIONAL: MOVE CODE ART MORE TO THE LEFT */
+/* Since you asked to move it to the left, we add margin to the first button */
+.left-btn {
+    margin-right: 40px; /* Pushes it away from the Arduino button */
 }
 
 /* ROW 2: DOODLE */
+.doodle-container {
+    position: relative;
+    z-index: -1; /* Puts doodle behind buttons if they overlap */
+}
+
 .doodle-container img {
-    width: 250px; /* Adjust this to make the doodle bigger/smaller */
+    width: 300px; /* Adjust size of the doodle here */
     height: auto;
     display: block;
 }
