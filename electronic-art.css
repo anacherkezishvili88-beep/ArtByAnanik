@@ -33,8 +33,6 @@ header img {
 .nav-button img {
     width: 500px;        /* This PREVENTS them from being huge */
     height: auto;
-    display: block;      /* Removes weird spacing */
-    transition: transform 0.4s;
 }
 
 /* HOVER EFFECT (Optional: makes them pop) */
