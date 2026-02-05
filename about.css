@@ -15,7 +15,7 @@ header {
 }
 
 header img {
-    width: 300px; /* Kept it smaller for the About page */
+    width: 250px; /* Kept it smaller for the About page */
     height: auto;
 }
 
@@ -38,7 +38,7 @@ header img {
 }
 
 .bio-image {
-    width: 500px;              /* Adjust size of the handwritten note */
+    width: 400px;              /* Adjust size of the handwritten note */
     max-width: 90%;            /* Keeps it responsive on mobile */
     height: auto;
     transform: rotate(2deg);   /* Optional: Slight tilt for "handwritten" feel */
@@ -84,3 +84,4 @@ header img {
         margin-bottom: 30px;
     }
 }
+
