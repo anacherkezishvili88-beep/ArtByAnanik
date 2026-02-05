@@ -1,71 +1,55 @@
-/* RESET */
+/* RESET EVERYTHING */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Helvetica', sans-serif;
-    background-color: white;
+    background-color: #ffffff;
+    font-family: sans-serif;
+    text-align: center; /* This helps center everything naturally */
 }
 
-/* HEADER */
+/* HEADER IMAGE */
 header {
-    text-align: center;
     margin-top: 40px;
-    margin-bottom: 60px; /* Space between header and buttons */
+    margin-bottom: 40px;
 }
 
 header img {
-    width: 50%;
-    max-width: 600px; /* Keeps header from getting too big */
+    width: 500px;       /* Fixed width so it doesn't get massive */
+    max-width: 90%;     /* responsive safety */
     height: auto;
 }
 
-/* MAIN LAYOUT WRAPPER */
-.main-content {
+/* THE BUTTON ROW */
+.button-row {
     display: flex;
-    flex-direction: column; /* Stacks Buttons on top of Doodle */
-    align-items: center;
+    justify-content: center; /* Centers them in the middle of screen */
+    align-items: center;     /* Aligns them vertically */
+    gap: 100px;              /* This BIG gap pushes Code Art to the left */
     width: 100%;
+    margin-bottom: 20px;     /* Space before the doodle */
 }
 
-/* ROW 1: BUTTONS */
-.buttons-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
-    /* This GAP separates the two buttons. */
-    gap: 80px; 
-    
-    margin-bottom: -40px; /* Negative margin pulls the doodle up closer */
-    width: 100%;
-}
-
-/* FIXING THE GIANT IMAGES */
-.button-link img {
-    width: 350px;  /* This fixes the giant size issue! */
+/* CRITICAL FIX: FORCE IMAGES TO BE SMALLER */
+.nav-button img {
+    width: 320px;        /* This PREVENTS them from being huge */
     height: auto;
+    display: block;      /* Removes weird spacing */
     transition: transform 0.2s;
 }
 
-.button-link img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+/* HOVER EFFECT (Optional: makes them pop) */
+.nav-button img:hover {
+    transform: scale(1.05);
 }
 
-/* OPTIONAL: MOVE CODE ART MORE TO THE LEFT */
-/* Since you asked to move it to the left, we add margin to the first button */
-.left-btn {
-    margin-right: 40px; /* Pushes it away from the Arduino button */
-}
-
-/* ROW 2: DOODLE */
+/* THE DOODLE (Centered Bottom) */
 .doodle-container {
-    position: relative;
-    z-index: -1; /* Puts doodle behind buttons if they overlap */
+    display: flex;
+    justify-content: center;
+    margin-top: -30px; /* Pulls it up slightly to nest in the "V" shape */
 }
 
 .doodle-container img {
-    width: 300px; /* Adjust size of the doodle here */
+    width: 250px;      /* Adjust size of the doodle here */
     height: auto;
-    display: block;
 }
