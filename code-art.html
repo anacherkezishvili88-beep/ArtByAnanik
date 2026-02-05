@@ -2,52 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronic Art</title>
     <link rel="stylesheet" href="code-art.css">
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
-  
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+
     <script src="optical_illusion.js"></script>
     <script src="experimental_clock.js"></script>
     <script src="face_generator.js"></script>
     <script src="pier.js"></script>
-    <script src="exquisite_corpse.js"></script>
-    <script src="quilts.js"></script>
+    <script src="exquisite_corpse.js"></script> <script src="quilts.js"></script>
     <script src="orchid.js"></script>
 </head>
 
 <body>
 
     <header>
-        <img src="electronic-art.png" alt="Electronic Art Header">
+        <img src="electronic-art.png" alt="Electronic Art">
     </header>
 
     <div class="main-container">
 
         <div class="project-wrapper">
             <h2>Optical Illusion</h2>
-            <p>Description goes here.</p>
-                </div>
+            <p>A mesmerizing pattern that plays with visual perception.</p>
+            <div class="visual-container" id="optical_illusion-container"></div>
         </div>
 
         <div class="project-wrapper">
             <h2>Autobiographical Game</h2>
-            <p>Description goes here.</p>
+            <p>An interactive narrative exploring personal history.</p>
+            <div class="visual-container">
                 <iframe 
                     src="https://editor.p5js.org/_ana_/full/qb80P1x_h" 
-                    width="800" 
-                    height="640" 
-                    style="border: none; overflow: hidden;"
-                    scrolling="no">
+                    width="800" height="640" scrolling="no">
                 </iframe>
             </div>
         </div>
 
         <div class="project-wrapper">
             <h2>Experimental Clock</h2>
-            <p>Description goes here.</p>
-            
+            <p>Visualizing time through motion and video capture.</p>
             <div class="clock-layout">
                 <div id="experimental_clock-container"></div>
                 <div id="raw-video-container"></div> 
@@ -56,37 +57,35 @@
 
         <div class="project-wrapper">
             <h2>Face Generator</h2>
-            <p>Description goes here.</p>
+            <p>Randomly generating facial features.</p>
+            <div class="visual-container" id="face_generator-container"></div>
         </div>
 
         <div class="project-wrapper">
             <h2>The Pier</h2>
-            <p>Description goes here.</p>
+            <p>A perspective study using code.</p>
+            <div class="visual-container" id="pier-container"></div>
         </div>
 
         <div class="project-wrapper">
             <h2>Exquisite Corpse</h2>
-            <p>Description goes here.</p>
-                <iframe 
-                    src="https://editor.p5js.org/_ana_/full/e3dn4LRlT" 
-                    width="1000" 
-                    height="700" 
-                    style="border: none; overflow: hidden; max-width: 100%;"
-                    scrolling="no"
-                    allow="camera; microphone; autoplay">
-                </iframe>
-            </div>
+            <p>Interactive full-body tracking mirror.</p>
+            <div class="visual-container" id="exquisite-corpse-container"></div>
         </div>
 
         <div class="project-wrapper">
             <h2>Quilts</h2>
-            <p>Description goes here.</p>
+            <p>Generative textile patterns.</p>
+            <div class="visual-container" id="quilts-container"></div>
         </div>
 
         <div class="project-wrapper">
             <h2>The Orchid</h2>
-            <p>Description goes here.</p>
+            <p>Organic motion and trail geometry.</p>
+            <div class="visual-container" id="orchid-container"></div>
         </div>
 
-    </div> </body>
+    </div>
+
+</body>
 </html>
