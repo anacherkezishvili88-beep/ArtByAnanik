@@ -1,0 +1,86 @@
+/* BASIC RESET */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* HEADER STYLE (Matches your other pages) */
+header {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 300px; /* Kept it smaller for the About page */
+    height: auto;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the whole canvas */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh; /* Ensures the page takes up most of the screen */
+}
+
+/* TOP SECTION: BIO (Right Side) */
+.top-section {
+    display: flex;
+    justify-content: flex-end; /* Pushes content to the RIGHT */
+    margin-bottom: 50px;       /* Space between top and bottom */
+    padding-right: 50px;       /* Keeps it from touching the very edge */
+}
+
+.bio-image {
+    width: 500px;              /* Adjust size of the handwritten note */
+    max-width: 90%;            /* Keeps it responsive on mobile */
+    height: auto;
+    transform: rotate(2deg);   /* Optional: Slight tilt for "handwritten" feel */
+}
+
+/* BOTTOM SECTION: CONTACT + DOODLE (Left Side) */
+.bottom-section {
+    display: flex;
+    flex-direction: row;       /* Puts them side-by-side */
+    justify-content: flex-start; /* Aligns them to the LEFT */
+    align-items: flex-end;     /* Aligns them at the bottom (feet of doodle) */
+    gap: 20px;                 /* Space between Contact note and Doodle */
+    padding-left: 50px;
+}
+
+/* Specific Image Sizing */
+.contact-image {
+    width: 350px;              /* Size of the "Contact Me" note */
+    height: auto;
+    margin-bottom: 50px;       /* Push it up slightly if needed */
+}
+
+.doodle-image {
+    width: 250px;              /* Size of the character doodle */
+    height: auto;
+}
+
+/* RESPONSIVE: If on mobile, stack everything */
+@media (max-width: 768px) {
+    .top-section {
+        justify-content: center;
+        padding-right: 0;
+    }
+    
+    .bottom-section {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    
+    .contact-image, .doodle-image, .bio-image {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
