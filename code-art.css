@@ -3,75 +3,79 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #f4f4f4; /* Light grey background */
+    /* You can make this white (#ffffff) or keep a very light grey (#f9f9f9) */
+    background-color: #ffffff; 
     color: #333;
 }
 
 header {
     text-align: center;
-    padding: 40px 0;
-    background-color: #fff;
-    margin-bottom: 40px;
+    padding: 60px 0 20px; /* More space on top */
+    margin-bottom: 60px;
 }
 
 header img {
-    max-width: 300px; /* Adjust header logo size */
+    max-width: 300px; 
     height: auto;
 }
 
-/* MAIN SPINAL CORD CONTAINER */
+/* THE SPINAL CORD (Holds everything together) */
 .main-container {
-    max-width: 900px;       /* Limits width for readability */
-    margin: 0 auto;         /* Centers the whole column */
-    display: flex;          /* Enables Flexbox */
-    flex-direction: column; /* Stacks projects vertically */
-    gap: 80px;              /* Consistent space between projects */
-    padding-bottom: 100px;  /* Space at the very bottom */
+    max-width: 1000px;      /* Slightly wider for a gallery feel */
+    margin: 0 auto;         /* Centers the column */
+    display: flex;
+    flex-direction: column; 
+    gap: 120px;             /* Big, airy space between projects */
+    padding-bottom: 150px;
 }
 
-/* INDIVIDUAL PROJECT CARDS */
+/* PROJECT SECTIONS (Invisible wrappers) */
 .project-wrapper {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;    /* Soft rounded corners */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Subtle shadow */
-    
-    /* Center content inside the card */
+    /* No background, no shadow, no border */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    /* Center everything horizontally */
     text-align: center;
 }
 
+/* TYPOGRAPHY */
 .project-wrapper h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 28px;
+    font-weight: 400;       /* Lighter, cleaner font weight */
+    margin-bottom: 15px;
+    font-size: 24px;
+    letter-spacing: 1px;    /* A bit of breathing room for letters */
+    text-transform: uppercase; /* Optional: makes headers look like a gallery */
 }
 
 .project-wrapper p {
-    color: #666;
-    max-width: 600px;
-    margin-bottom: 30px; /* Space between text and visual */
+    color: #555;
+    max-width: 500px;       /* Keep text narrow for readability */
+    margin-bottom: 40px;    /* Space between text and art */
+    font-size: 14px;
     line-height: 1.6;
 }
 
-/* TARGETS P5 CANVASES & IFRAMES */
-/* This ensures anything inside the visual slot centers perfectly */
+/* VISUAL CONTAINERS */
 .visual-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap; /* Helps if you have side-by-side elements */
 }
 
-/* SPECIFIC FIX FOR EXPERIMENTAL CLOCK LAYOUT */
-/* Since this one has two divs side-by-side, we style its container specifically */
+/* SPECIAL LAYOUT FOR CLOCK (Side-by-Side) */
 .clock-layout {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+/* IFRAME CLEANUP */
+/* This removes the ugly bevel/border from iframes if you still use them */
+iframe {
+    border: none;
+    box-shadow: none;
 }
