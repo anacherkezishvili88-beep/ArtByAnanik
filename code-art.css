@@ -1,120 +1,56 @@
-header {
- text-align: left;
-    margin-bottom: 35px; 
-    margin-left: 35px;
+/* 1. Reset defaults to avoid weird spacing */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', sans-serif; /* Or your preferred font */
+  background-color: #f9f9f9; /* Light grey background looks cleaner */
 }
 
-header img {
-    width: 50%; 
-    height: auto;
-    margin-top: 35px;
+/* 2. THE MAIN COLUMN - This holds everything */
+.main-container {
+  max-width: 900px;       /* Limits width so it doesn't stretch too wide */
+  margin: 0 auto;         /* MAGIC: Centers the column horizontally */
+  padding: 60px 20px;     /* Adds breathing room at top/bottom and sides */
+  display: flex;          /* Enables Flexbox layout */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center;    /* Centers items horizontally */
+  gap: 80px;              /* Adds consistent space between every project */
 }
 
-.optical{
-    width: 600px;
-    height:640px;
-    transition: all 0.7s ease; 
+/* 3. PROJECT CARDS - Wraps each individual sketch */
+.project-wrapper {
+  background: white;      /* Gives each project a clean card look */
+  padding: 40px;          
+  border-radius: 15px;    /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Soft shadow for depth */
+  width: 100%;            /* Fills the container width */
+  box-sizing: border-box; /* Ensures padding doesn't break the width */
+  
+  /* Centers the content inside the card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.game{
-    width: 800px;
-    height:640px;
-    transition: all 0.7s ease;
+/* Text styling to keep it neat */
+.project-wrapper h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
 }
 
-.clock{
-    width: 600px;
-    height: 640px;
-    transition: all 0.7s ease;
+.project-wrapper p {
+  color: #666;
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 30px; /* Space between text and sketch */
 }
 
-.face{
-    width: 400px;
-    height: 440px;
-    transition: all 0.7s ease;
+/* This targets the DIVs where p5 puts the canvas */
+.p5-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-
-.pier{
-    width: 400px;
-    height: 440px;
-    transition: all 0.7s ease;
-}
-
-.corpse{
-    width: 500px; 
-    height: 1140px; 
-    transition: all 0.7s ease;
-}
-
-.quilts{ 
-    width: 420px;
-    height: 590px; 
-    transition: all 0.7s ease;
-}
-
-.orchid{
-    width: 400px; 
-    height: 440px;
-    transition: all 0.7s ease;
-}
-
-.p5s{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: stretch;
-    flex-direction: column;
-    gap: 20px; 
-}
-
-.container{
-    width: 100%;
-    position: relative;
-    margin-left: 30%;
-    margin-top: 9%;
-}
-
-.container:hover .optical {
-    margin-left: -5%;
-}
-.container:hover .game {
-    margin-left: -25%; 
-}
-.container:hover .clock {
-    margin-left: -15%; 
-}
-.container:hover .face {
-    margin-left: -7%; 
-}
-.container:hover .pier {
-    margin-left: -7%; 
-}
-.container:hover .corpse {
-    margin-left: -10%; 
-}
-.container:hover .quilts {
-    margin-left: -7%; 
-}
-.container:hover .orchid {
-    margin-left: -7%; 
-}
-
-.projectinfo {
-    position: absolute;
-    top: 20%;
-    left: 38%; 
-    opacity: 0;
-    pointer-events: none;
-    width: 30%;
-    transition: opacity 0.2s ease 0.3s, transform 0.4s ease 0.4s;
-}
-
-.container:hover .projectinfo {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.container:not(:hover) .projectinfo {
-    transition-delay: 0s;
-}
-
