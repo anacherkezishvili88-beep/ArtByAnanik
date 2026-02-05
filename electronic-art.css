@@ -44,7 +44,7 @@ header img {
 .doodle-container {
     display: flex;
     justify-content: center;
-    margin-top: -30px; /* Pulls it up slightly to nest in the "V" shape */
+    margin-top: -20px; /* Pulls it up slightly to nest in the "V" shape */
 }
 
 .doodle-container img {
