@@ -1,74 +1,55 @@
-/* BASIC SETUP */
+/* RESET EVERYTHING */
 body {
     margin: 0;
     padding: 0;
-    background-color: #fff; /* White paper background */
+    background-color: #ffffff;
     font-family: sans-serif;
-    min-height: 100vh; /* Ensures page takes full height */
-    box-sizing: border-box;
+    text-align: center; /* This helps center everything naturally */
 }
 
-.about-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Pushes Top section up and Bottom section down */
-    min-height: 85vh; /* Takes up most of the screen height */
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* HEADER IMAGE */
+header {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-/* TOP SECTION (Bio) */
-.top-section {
+header img {
+    width: 500px;       /* Fixed width so it doesn't get massive */
+    max-width: 90%;     /* responsive safety */
+    height: auto;
+}
+
+/* THE BUTTON ROW */
+.button-row {
     display: flex;
-    justify-content: flex-end; /* Pushes content to the RIGHT */
+    justify-content: center; /* Centers them in the middle of screen */
+    align-items: center;     /* Aligns them vertically */
+    gap: 100px;              /* This BIG gap pushes Code Art to the left */
     width: 100%;
+    margin-bottom: 20px;     /* Space before the doodle */
 }
 
-.bio-img {
-    width: 450px;       /* Size of the bio note */
-    max-width: 90%;     /* Mobile safety */
+/* CRITICAL FIX: FORCE IMAGES TO BE SMALLER */
+.nav-button img {
+    width: 320px;        /* This PREVENTS them from being huge */
     height: auto;
-    transform: rotate(1deg); /* Slight tilt for realism */
+    display: block;      /* Removes weird spacing */
+    transition: transform 0.2s;
 }
 
-/* BOTTOM SECTION (Contact + Doodle) */
-.bottom-section {
+/* HOVER EFFECT (Optional: makes them pop) */
+.nav-button img:hover {
+    transform: scale(1.05);
+}
+
+/* THE DOODLE (Centered Bottom) */
+.doodle-container {
     display: flex;
-    align-items: flex-end; /* Aligns them at the bottom (feet level) */
-    gap: 30px;             /* Space between Contact note and Doodle */
-    margin-top: 50px;
+    justify-content: center;
+    margin-top: -30px; /* Pulls it up slightly to nest in the "V" shape */
 }
 
-/* Specific Sizes */
-.contact-img {
-    width: 350px;        /* Adjust size of Contact Text */
+.doodle-container img {
+    width: 250px;      /* Adjust size of the doodle here */
     height: auto;
-    margin-bottom: 50px; /* Moves it up slightly so it's not on the floor */
-}
-
-.doodle-img {
-    width: 280px;        /* Adjust size of Doodle */
-    height: auto;
-}
-
-/* MOBILE RESPONSIVE (Stacks them if screen is too small) */
-@media (max-width: 800px) {
-    .about-container {
-        justify-content: center;
-        gap: 50px;
-    }
-
-    .top-section {
-        justify-content: center; /* Center bio on mobile */
-    }
-
-    .bottom-section {
-        flex-direction: column; /* Stack contact on top of doodle */
-        align-items: center;
-    }
-    
-    .contact-img {
-        margin-bottom: 20px;
-    }
 }
