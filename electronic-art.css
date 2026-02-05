@@ -14,7 +14,7 @@ header {
 }
 
 header img {
-    width: 500px;       /* Fixed width so it doesn't get massive */
+    width: 600px;       /* Fixed width so it doesn't get massive */
     max-width: 90%;     /* responsive safety */
     height: auto;
 }
@@ -31,7 +31,7 @@ header img {
 
 /* CRITICAL FIX: FORCE IMAGES TO BE SMALLER */
 .nav-button img {
-    width: 320px;        /* This PREVENTS them from being huge */
+    width: 500px;        /* This PREVENTS them from being huge */
     height: auto;
     display: block;      /* Removes weird spacing */
     transition: transform 0.2s;
@@ -50,6 +50,6 @@ header img {
 }
 
 .doodle-container img {
-    width: 250px;      /* Adjust size of the doodle here */
+    width: 350px;      /* Adjust size of the doodle here */
     height: auto;
 }
