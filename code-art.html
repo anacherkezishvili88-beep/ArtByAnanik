@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronic Art</title>
     <link rel="stylesheet" href="code-art.css">
     
-    <!-- p5.js libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
 
-    <!-- p5.js sketches --> 
     <script src="optical_illusion.js"></script>
     <script src="experimental_clock.js"></script>
     <script src="face_generator.js"></script>
@@ -27,87 +24,77 @@
         <img src="electronic-art.png" alt="Electronic Art Header">
     </header>
 
-<div class="container"> 
-    <!-- Canvas will appear here -->
-    <div id="optical_illusion-container"></div>
-    <div class="projectinfo">
-    <h2> Optical Illusion </h2>
-    <p> Description </p>
-     </div>
-</div>
+    <div class="main-container">
 
-    
-<div class="project-wrapper">
-  <h3>Autobiographical Game</h3>
-  <p> Description </p>
-  
-  <iframe 
-    src="https://editor.p5js.org/_ana_/full/qb80P1x_h" 
-    width="800" 
-    height="640" 
-    style="border: none; overflow: hidden;"
-    scrolling="no">
-  </iframe>
-  </div>
+        <div class="project-wrapper">
+            <h2>Optical Illusion</h2>
+            <p>Description goes here.</p>
+            <div class="visual-container" id="optical_illusion-container">
+                </div>
+        </div>
 
-    <div class="container">
-        <div id="experimental_clock-container"></div>
-        <div class="projectinfo">
-        <h2>Experimental Clock</h2>
-        <p> Description </p>
-            <div class="clock-layout" style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
-            <div id="experimental_clock-container">
-            </div>
-            <div id="raw-video-container">
+        <div class="project-wrapper">
+            <h2>Autobiographical Game</h2>
+            <p>Description goes here.</p>
+            <div class="visual-container">
+                <iframe 
+                    src="https://editor.p5js.org/_ana_/full/qb80P1x_h" 
+                    width="800" 
+                    height="640" 
+                    style="border: none; overflow: hidden;"
+                    scrolling="no">
+                </iframe>
             </div>
         </div>
-    </div>
 
-     <div class="container">
-        <div id="face_generator-container"></div>
-        <div class="projectinfo">
-        <h2>Face Generator</h2>
-        <p> Description </p>
+        <div class="project-wrapper">
+            <h2>Experimental Clock</h2>
+            <p>Description goes here.</p>
+            
+            <div class="clock-layout">
+                <div id="experimental_clock-container"></div>
+                <div id="raw-video-container"></div> 
+            </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div id="pier-container"></div>
-        <div class="projectinfo">
-        <h2>The Pier</h2>
-        <p> Description </p>
+        <div class="project-wrapper">
+            <h2>Face Generator</h2>
+            <p>Description goes here.</p>
+            <div class="visual-container" id="face_generator-container"></div>
         </div>
-    </div>
 
-  <div class="project-wrapper">
-    <h3>Exquisite Corpse</h3>
-    <p> Description </p>
-    
-    <iframe 
-        src="https://editor.p5js.org/_ana_/full/e3dn4LRlT" 
-        width="1000" 
-        height="700" 
-        style="border: none; overflow: hidden; max-width: 100%;"
-        scrolling="no"
-        allow= "camera; microphone; autoplay">
-    </iframe>
-</div>
-
-    <div class="container">
-        <div id="quilts-container"></div>
-        <div class="projectinfo">
-        <h2>Quilts</h2>
-        <p> Description </p>
+        <div class="project-wrapper">
+            <h2>The Pier</h2>
+            <p>Description goes here.</p>
+            <div class="visual-container" id="pier-container"></div>
         </div>
-    </div>
 
-    <div class="container">
-        <div id="orchid-container"></div>
-        <div class="projectinfo">
-        <h2>The Orchid</h2>
-        <p> Description </p>
+        <div class="project-wrapper">
+            <h2>Exquisite Corpse</h2>
+            <p>Description goes here.</p>
+            <div class="visual-container">
+                <iframe 
+                    src="https://editor.p5js.org/_ana_/full/e3dn4LRlT" 
+                    width="1000" 
+                    height="700" 
+                    style="border: none; overflow: hidden; max-width: 100%;"
+                    scrolling="no"
+                    allow="camera; microphone; autoplay">
+                </iframe>
+            </div>
         </div>
-    </div>
 
-    </body>
+        <div class="project-wrapper">
+            <h2>Quilts</h2>
+            <p>Description goes here.</p>
+            <div class="visual-container" id="quilts-container"></div>
+        </div>
+
+        <div class="project-wrapper">
+            <h2>The Orchid</h2>
+            <p>Description goes here.</p>
+            <div class="visual-container" id="orchid-container"></div>
+        </div>
+
+    </div> </body>
 </html>
