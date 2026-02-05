@@ -1,56 +1,77 @@
-/* 1. Reset defaults to avoid weird spacing */
+/* RESET & FONTS */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Helvetica', sans-serif; /* Or your preferred font */
-  background-color: #f9f9f9; /* Light grey background looks cleaner */
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333;
 }
 
-/* 2. THE MAIN COLUMN - This holds everything */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+header img {
+    max-width: 300px; /* Adjust header logo size */
+    height: auto;
+}
+
+/* MAIN SPINAL CORD CONTAINER */
 .main-container {
-  max-width: 900px;       /* Limits width so it doesn't stretch too wide */
-  margin: 0 auto;         /* MAGIC: Centers the column horizontally */
-  padding: 60px 20px;     /* Adds breathing room at top/bottom and sides */
-  display: flex;          /* Enables Flexbox layout */
-  flex-direction: column; /* Stacks items vertically */
-  align-items: center;    /* Centers items horizontally */
-  gap: 80px;              /* Adds consistent space between every project */
+    max-width: 900px;       /* Limits width for readability */
+    margin: 0 auto;         /* Centers the whole column */
+    display: flex;          /* Enables Flexbox */
+    flex-direction: column; /* Stacks projects vertically */
+    gap: 80px;              /* Consistent space between projects */
+    padding-bottom: 100px;  /* Space at the very bottom */
 }
 
-/* 3. PROJECT CARDS - Wraps each individual sketch */
+/* INDIVIDUAL PROJECT CARDS */
 .project-wrapper {
-  background: white;      /* Gives each project a clean card look */
-  padding: 40px;          
-  border-radius: 15px;    /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Soft shadow for depth */
-  width: 100%;            /* Fills the container width */
-  box-sizing: border-box; /* Ensures padding doesn't break the width */
-  
-  /* Centers the content inside the card */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;    /* Soft rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Subtle shadow */
+    
+    /* Center content inside the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-/* Text styling to keep it neat */
-.project-wrapper h3 {
-  margin-top: 0;
-  font-size: 24px;
-  color: #333;
+.project-wrapper h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
 }
 
 .project-wrapper p {
-  color: #666;
-  max-width: 600px;
-  line-height: 1.5;
-  margin-bottom: 30px; /* Space between text and sketch */
+    color: #666;
+    max-width: 600px;
+    margin-bottom: 30px; /* Space between text and visual */
+    line-height: 1.6;
 }
 
-/* This targets the DIVs where p5 puts the canvas */
-.p5-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+/* TARGETS P5 CANVASES & IFRAMES */
+/* This ensures anything inside the visual slot centers perfectly */
+.visual-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* Helps if you have side-by-side elements */
+}
+
+/* SPECIFIC FIX FOR EXPERIMENTAL CLOCK LAYOUT */
+/* Since this one has two divs side-by-side, we style its container specifically */
+.clock-layout {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
